@@ -9,11 +9,13 @@ h1 {
   color:#EDDD9E;
 }
 
-iframe {
-  text-align:center;
+#UTCTime {
+  position:relative;
 }
+
 p {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
 }
+
