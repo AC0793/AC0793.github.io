@@ -2,8 +2,14 @@
 body {
   background-color:#500000;
 }
-
+/*Headings*/
 h1 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+}
+
+h2 {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
@@ -15,7 +21,19 @@ h3 {
   color:#EDDD9E;
 }
 
+h4 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+}
+
 h5 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+}
+
+h6 {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
@@ -27,9 +45,13 @@ p {
   color:#EDDD9E;
 }
 
+/*Clock*/
 #UTCTime {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
 }
+
+
+
 
