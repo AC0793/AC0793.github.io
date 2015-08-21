@@ -9,11 +9,19 @@ h1 {
   color:#EDDD9E;
 }
 
-#UTCTime {
-  position:relative;
+h3 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
 }
 
 p {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+}
+
+div {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
