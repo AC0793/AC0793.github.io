@@ -69,7 +69,7 @@ margin-right: auto;
 background-color: #500000;
 text-align: center;
 color: #EDDD9E;
-border: #EDDD9E 5px solid;
+border: #EDDD9E 5px outset;
 /*display: none;*/
 }
 
