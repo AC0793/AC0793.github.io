@@ -48,7 +48,7 @@ p {
 /*Clock*/
 #UTCTime {
   font-family: Arial, sans-serif;
-  text-align: center;
+  /*text-align: center;*/
   color:#EDDD9E;
 }
 
