@@ -59,7 +59,7 @@ p {
   margin-right: auto ;
 }*/
 
-/*Button for Product #1*/
+/*Button for Product Section #1*/
 #bt1 {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -73,4 +73,41 @@ border: #EDDD9E 5px outset;
 /*display: none;*/
 }
 
+/*Button for Product Section #2*/
+#bt2 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+margin-left: auto;
+margin-right: auto;
+background-color: #500000;
+text-align: center;
+color: #EDDD9E;
+border: #EDDD9E 5px outset;
+}
 
+/*Button for Product Section #3*/
+#bt3 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+margin-left: auto;
+margin-right: auto;
+background-color: #500000;
+text-align: center;
+color: #EDDD9E;
+border: #EDDD9E 5px outset;
+}
+
+/*Button for Product Section #4*/
+#bt4 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;
+margin-left: auto;
+margin-right: auto;
+background-color: #500000;
+text-align: center;
+color: #EDDD9E;
+border: #EDDD9E 5px outset;
+}
