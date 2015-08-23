@@ -64,6 +64,17 @@ p {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
+  position: absolute;
+left: 400px;
+top: 250px;
+padding: 10px;
+margin-left: auto;
+margin-right: auto;
+background-color: #500000;
+text-align: center;
+color: #EDDD9E;
+border: #EDDD9E 5px solid;
+display: none;
 }
 
 
