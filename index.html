@@ -32,7 +32,7 @@ display: none;
 }
 </style>
 
-
+<!--BEGIN Product Hide/Show Scripts Section-->
 <script language="JavaScript">
 function setVisibility(id) {
 if(document.getElementById('bt1').value=='Hide Layer'){
@@ -45,11 +45,59 @@ document.getElementById(id).style.display = 'inline';
 }
 
 </script>
+
+<script language="JavaScript">
+function setVisibility(id) {
+if(document.getElementById('bt2').value=='Hide Layer'){
+document.getElementById('bt2').value = 'Show Layer';
+document.getElementById(id).style.display = 'none';
+}else{
+document.getElementById('bt2').value = 'Hide Layer';
+document.getElementById(id).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(id) {
+if(document.getElementById('bt3').value=='Hide Layer'){
+document.getElementById('bt3').value = 'Show Layer';
+document.getElementById(id).style.display = 'none';
+}else{
+document.getElementById('bt3').value = 'Hide Layer';
+document.getElementById(id).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(id) {
+if(document.getElementById('bt4').value=='Hide Layer'){
+document.getElementById('bt4').value = 'Show Layer';
+document.getElementById(id).style.display = 'none';
+}else{
+document.getElementById('bt4').value = 'Hide Layer';
+document.getElementById(id).style.display = 'inline';
+}
+}
+
+</script>
+<!--END Product Hide/Show Scripts Section-->
 </head>
 <body>
-
-<input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('sub3');";> 
-
-<div id="sub3">Message Box</div>
+<!--Product Switchers-->
+<div id="productswitchboard">
+<input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('sub1');";> 
+<input type=button name=type id='bt2' value='Show Layer' onclick="setVisibility('sub2');";> 
+<input type=button name=type id='bt3' value='Show Layer' onclick="setVisibility('sub3');";> 
+<input type=button name=type id='bt4' value='Show Layer' onclick="setVisibility('sub4');";> 
+</div>
+<!--Product Panels-->
+<div id="sub1"><h3>Surface:</h3></div>
+<div id="sub2"><h3>Upper-Level:</h3></div>
+<div id="sub3"><h3>Severe:</h3></div>
+<div id="sub4"><h3>Moisture:</h3></div>
 </body>
 </html>
