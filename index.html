@@ -35,11 +35,11 @@ display: none;
 <!--BEGIN Product Hide/Show Scripts Section-->
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt1').value=='Hide Layer'){
-document.getElementById('bt1').value = 'Show Layer';
+if(document.getElementById('bt1').value=='Hide Surface Products'){
+document.getElementById('bt1').value = 'Show Surface Products';
 document.getElementById(id).style.display = 'none';
 }else{
-document.getElementById('bt1').value = 'Hide Layer';
+document.getElementById('bt1').value = 'Hide Surface Products';
 document.getElementById(id).style.display = 'inline';
 }
 }
@@ -48,11 +48,11 @@ document.getElementById(id).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt2').value=='Hide Layer'){
-document.getElementById('bt2').value = 'Show Layer';
+if(document.getElementById('bt2').value=='Hide Upper-Level Products'){
+document.getElementById('bt2').value = 'Show Upper-Level Products';
 document.getElementById(id).style.display = 'none';
 }else{
-document.getElementById('bt2').value = 'Hide Layer';
+document.getElementById('bt2').value = 'Hide Upper-Level Products ';
 document.getElementById(id).style.display = 'inline';
 }
 }
@@ -61,11 +61,11 @@ document.getElementById(id).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt3').value=='Hide Layer'){
-document.getElementById('bt3').value = 'Show Layer';
+if(document.getElementById('bt3').value=='Hide Severe Products'){
+document.getElementById('bt3').value = 'Show Severe Products';
 document.getElementById(id).style.display = 'none';
 }else{
-document.getElementById('bt3').value = 'Hide Layer';
+document.getElementById('bt3').value = 'Hide Severe Products';
 document.getElementById(id).style.display = 'inline';
 }
 }
@@ -74,11 +74,11 @@ document.getElementById(id).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt4').value=='Hide Layer'){
-document.getElementById('bt4').value = 'Show Layer';
+if(document.getElementById('bt4').value=='Hide Moisture Products'){
+document.getElementById('bt4').value = 'Show Moisture Products';
 document.getElementById(id).style.display = 'none';
 }else{
-document.getElementById('bt4').value = 'Hide Layer';
+document.getElementById('bt4').value = 'Hide Moisture Products';
 document.getElementById(id).style.display = 'inline';
 }
 }
@@ -89,10 +89,10 @@ document.getElementById(id).style.display = 'inline';
 <body>
 <!--Product Switchers-->
 <!--<div id="productswitchboard" class="static">-->
-<input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('sub1');";> 
-<input type=button name=type id='bt2' value='Show Layer' onclick="setVisibility('sub2');";> 
-<input type=button name=type id='bt3' value='Show Layer' onclick="setVisibility('sub3');";> 
-<input type=button name=type id='bt4' value='Show Layer' onclick="setVisibility('sub4');";> 
+<input type=button name=type id='bt1' value='Show Surface Products' onclick="setVisibility('sub1');";> 
+<input type=button name=type id='bt2' value='Show Upper-Level Products' onclick="setVisibility('sub2');";> 
+<input type=button name=type id='bt3' value='Show Severe Products' onclick="setVisibility('sub3');";> 
+<input type=button name=type id='bt4' value='Show Moisture Products' onclick="setVisibility('sub4');";> 
 <!--</div>-->
 <!--Product Panels-->
 <div id="sub1"><h3>Surface:</h3></div>
