@@ -117,7 +117,7 @@ border: #EDDD9E 5px outset;
 
 /*<style type="text/css">*/
 #sub1 {
-  position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;
+  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
   
 /*position: absolute;
 left: 300px;
@@ -136,7 +136,7 @@ display: none;
 /*</style>*/
 
 #sub2 {
-  position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;
+  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
   
 /*position: absolute;
 left: 300px;
@@ -154,7 +154,7 @@ display: none;
 }
 
 #sub3 {
-  position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;
+  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
   
 /*position: absolute;
 left: 300px;
@@ -172,7 +172,7 @@ display: none;
 }
 
 #sub4 {
-  position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;
+  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
   
 /*position: absolute;
 left: 300px;
