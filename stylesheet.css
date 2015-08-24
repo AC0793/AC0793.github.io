@@ -1,7 +1,7 @@
 /*Maroon Background*/
 body {
   background-color:#500000;
-  margin: 100px 100px 100px 100px;
+  margin: 10px 100px 100px 100px;
 }
 /*Headings*/
 h1 {
@@ -181,9 +181,9 @@ display: none;
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
 position: absolute;
-left: 50%;/*300px*/
-top: 50%; /*250px*/
-right: 50%;
+left: 10%;/*300px*/
+top: 10%; /*250px*/
+right: 10%;
 /*width: 280px;*/
 padding: 10px;
 width: 700px;
