@@ -7,7 +7,12 @@
   <script type="text/javascript" src="./hanis_min.js"> </script>
   <title>TAMUWRF Example</title>
   </head>
-<body style="width:800px;" onload="HAniS.setup('config.txt','handiv')">
+<body style="width:500px;" onload="HAniS.setup(
+'filenames = TVIS1.GIF, TVIS2.GIF, TVIS3.GIF \n\
+controls = startstop, speed, step, looprock, zoom \n\
+controls_style = display:flex;flex-flow:row; \n\
+buttons_style = flex:auto;margin:2px;' ,
+'handiv')">
 <h1>TAMU WRF</h1>
 <h5>3-km WRF-ARW | 24-hour forecasts initialized daily at 06Z/UTC using 12-km NAM IC/BC.</h5>
 <!--<iframe src="https://freesecure.timeanddate.com/clock/i296k8sy/fs15/fcfff/tc500000/ftb/pa5/tt0/tw1/ta1" frameborder="0" width="334" height="27">
