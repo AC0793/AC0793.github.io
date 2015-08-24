@@ -120,8 +120,8 @@ border: #EDDD9E 5px outset;
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
 position: absolute;
-left: 300px;
-top: 250px;
+left: 50%;/*300px*/
+top: 50%; /*250px*/
 /*width: 280px;*/
 padding: 10px;
 width: 700px;
@@ -139,8 +139,8 @@ display: none;
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
 position: absolute;
-left: 300px;
-top: 250px;
+left: 50%;/*300px*/
+top: 50%; /*250px*/
 /*width: 280px;*/
 padding: 10px;
 width: 700px;
@@ -157,8 +157,8 @@ display: none;
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
 position: absolute;
-left: 300px;
-top: 250px;
+left: 50%;/*300px*/
+top: 50%; /*250px*/
 /*width: 280px;*/
 padding: 10px;
 width: 700px;
@@ -175,8 +175,8 @@ display: none;
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
 position: absolute;
-left: 300px;
-top: 250px;
+left: 50%;/*300px*/
+top: 50%; /*250px*/
 /*width: 280px;*/
 padding: 10px;
 width: 700px;
