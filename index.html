@@ -34,11 +34,11 @@ display: none;
 <!--BEGIN Product Hide/Show Scripts Section-->
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt1').value=='Hide Surface Products'){
-document.getElementById('bt1').value = 'Show Surface Products';
+if(document.getElementById('bt1').value=='Hide Simulated 1-km Reflectivity'){
+document.getElementById('bt1').value = 'Show Simulated 1-km Reflectivity';
 document.getElementById(sub1).style.display = 'none';
 }else{
-document.getElementById('bt1').value = 'Hide Surface Products';
+document.getElementById('bt1').value = 'Hide Simulated 1-km Reflectivity';
 document.getElementById(sub1).style.display = 'inline';
 }
 }
@@ -47,11 +47,11 @@ document.getElementById(sub1).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(id) {
-if(document.getElementById('bt2').value=='Hide Upper-Level Products'){
-document.getElementById('bt2').value = 'Show Upper-Level Products';
+if(document.getElementById('bt2').value=='Hide Surface-based CAPE and CIN'){
+document.getElementById('bt2').value = 'Show Surface-based CAPE and CIN';
 document.getElementById(sub2).style.display = 'none';
 }else{
-document.getElementById('bt2').value = 'Hide Upper-Level Products ';
+document.getElementById('bt2').value = 'Hide Surface-based CAPE and CIN';
 document.getElementById(sub2).style.display = 'inline';
 }
 }
@@ -60,11 +60,11 @@ document.getElementById(sub2).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub3) {
-if(document.getElementById('bt3').value=='Hide Severe Products'){
-document.getElementById('bt3').value = 'Show Severe Products';
+if(document.getElementById('bt3').value=='Hide Precipitable Water'){
+document.getElementById('bt3').value = 'Show Precipitable Water';
 document.getElementById(sub3).style.display = 'none';
 }else{
-document.getElementById('bt3').value = 'Hide Severe Products';
+document.getElementById('bt3').value = 'Hide Precipitable Water';
 document.getElementById(sub3).style.display = 'inline';
 }
 }
@@ -73,11 +73,11 @@ document.getElementById(sub3).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub4) {
-if(document.getElementById('bt4').value=='Hide Moisture Products'){
-document.getElementById('bt4').value = 'Show Moisture Products';
+if(document.getElementById('bt4').value=='Hide 2-m Temperature, MSLP, 10-m Winds'){
+document.getElementById('bt4').value = 'Show 2-m Temperature, MSLP, 10-m Winds';
 document.getElementById(sub4).style.display = 'none';
 }else{
-document.getElementById('bt4').value = 'Hide Moisture Products';
+document.getElementById('bt4').value = 'Hide 2-m Temperature, MSLP, 10-m Winds';
 document.getElementById(sub4).style.display = 'inline';
 }
 }
@@ -101,27 +101,27 @@ document.getElementById(id).style.display = 'inline';
 </head>
 <body>
 <!--Product Switchers-->
-<input type=button name=type id='bt1' value='Show Surface Products' onclick="setVisibility('sub1');";> 
-<input type=button name=type id='bt2' value='Show Upper-Level Products' onclick="setVisibility('sub2');";> 
-<input type=button name=type id='bt3' value='Show Severe Products' onclick="setVisibility('sub3');";> 
-<input type=button name=type id='bt4' value='Show Moisture Products' onclick="setVisibility('sub4');";> 
+<input type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
+<input type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
+<input type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
+<input type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
 
 <!--Product Panels-->
 <div id="sub1">
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
-  <h3>Surface:</h3>
+  <h4>Simulated 1-km Reflectivity</h4>
 </div>
 <div id="sub2">
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
-  <h3>Upper-Level:</h3>
+  <h4>Surface-based CAPE and CIN</h4>
 </div>
 <div id="sub3">
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
-  <h3>Severe:</h3>
+  <h4>Precipitable Water</h4>
 </div>
 <div id="sub4">
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
-  <h3>Moisture:</h3>
+  <h4>2-m Temperature, MSLP, 10-m Winds</h4>
 </div>
 </body>
 </html>
