@@ -13,7 +13,6 @@
 </iframe>
 </div>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 <h3>PRODUCTS</h3>
 <p>&nbsp;</p>
 <style type="text/css">
@@ -39,10 +38,10 @@ display: none;
 function setVisibility(id) {
 if(document.getElementById('bt1').value=='Hide Surface Products'){
 document.getElementById('bt1').value = 'Show Surface Products';
-document.getElementById(id).style.display = 'none';
+document.getElementById(sub1).style.display = 'none';
 }else{
 document.getElementById('bt1').value = 'Hide Surface Products';
-document.getElementById(id).style.display = 'inline';
+document.getElementById(sub1).style.display = 'inline';
 }
 }
 
@@ -52,16 +51,42 @@ document.getElementById(id).style.display = 'inline';
 function setVisibility(id) {
 if(document.getElementById('bt2').value=='Hide Upper-Level Products'){
 document.getElementById('bt2').value = 'Show Upper-Level Products';
-document.getElementById(id).style.display = 'none';
+document.getElementById(sub2).style.display = 'none';
 }else{
 document.getElementById('bt2').value = 'Hide Upper-Level Products ';
-document.getElementById(id).style.display = 'inline';
+document.getElementById(sub2).style.display = 'inline';
 }
 }
 
 </script>
 
 <script language="JavaScript">
+function setVisibility(sub3) {
+if(document.getElementById('bt3').value=='Hide Severe Products'){
+document.getElementById('bt3').value = 'Show Severe Products';
+document.getElementById(sub3).style.display = 'none';
+}else{
+document.getElementById('bt3').value = 'Hide Severe Products';
+document.getElementById(sub3).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub4) {
+if(document.getElementById('bt4').value=='Hide Moisture Products'){
+document.getElementById('bt4').value = 'Show Moisture Products';
+document.getElementById(sub4).style.display = 'none';
+}else{
+document.getElementById('bt4').value = 'Hide Moisture Products';
+document.getElementById(sub4).style.display = 'inline';
+}
+}
+
+</script>
+
+<!--<script language="JavaScript">
 function setVisibility(id) {
 if(document.getElementById('bt3').value=='Hide Severe Products'){
 document.getElementById('bt3').value = 'Show Severe Products';
@@ -72,20 +97,8 @@ document.getElementById(id).style.display = 'inline';
 }
 }
 
-</script>
+</script>-->
 
-<script language="JavaScript">
-function setVisibility(id) {
-if(document.getElementById('bt4').value=='Hide Moisture Products'){
-document.getElementById('bt4').value = 'Show Moisture Products';
-document.getElementById(id).style.display = 'none';
-}else{
-document.getElementById('bt4').value = 'Hide Moisture Products';
-document.getElementById(id).style.display = 'inline';
-}
-}
-
-</script>
 <!--END Product Hide/Show Scripts Section-->
 </head>
 <body>
