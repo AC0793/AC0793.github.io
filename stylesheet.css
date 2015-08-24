@@ -182,11 +182,11 @@ display: none;
   
 position: absolute;
 left: 26%;/*300px*/
-top: 55%; /*250px*/
+top: 60%; /*250px*/
 right: 10%;
 /*width: 280px;*/
 padding: 10px;
-width: 700px;
+width: 75%; /*700px;*/
 /*margin-left: auto;
 margin-right: auto;*/
 background-color: #500000;
