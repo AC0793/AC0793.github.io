@@ -113,7 +113,7 @@ color: #EDDD9E;
 border: #EDDD9E 5px outset;
 }
 
-.productswitchboard {
+#productswitchboard {
   height:20px; position:relative; margin: -20px -50px; width:100px; top:50%; left:50%;
   /*font-family: Arial, sans-serif;
   text-align: center;
