@@ -47,9 +47,10 @@ p {
 
 /*Clock*/
 #UTCTime {
-  font-family: Arial, sans-serif;
-  /*text-align: center;*/
-  color:#EDDD9E;
+  /*font-family: Arial, sans-serif;
+  text-align: center;
+  color:#EDDD9E;*/
+  width:100%;
 }
 
 /*div centering*/
@@ -113,13 +114,14 @@ border: #EDDD9E 5px outset;
 }
 
 .productswitchboard {
-  font-family: Arial, sans-serif;
+  height:20px; position:relative; margin: -20px -50px; width:100px; top:50%; left:50%;
+  /*font-family: Arial, sans-serif;
   text-align: center;
   color:#EDDD9E;
   background-color: #500000;
   margin-left: auto;
   margin-right: auto;
-  border: #EDDD9E 5px outset;
+  border: #EDDD9E 5px outset;*/
 }
 
 
