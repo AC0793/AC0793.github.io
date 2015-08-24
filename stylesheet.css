@@ -117,15 +117,15 @@ border: #EDDD9E 5px outset;
 
 /*<style type="text/css">*/
 #sub1 {
-  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
+  /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
-/*position: absolute;
+position: absolute;
 left: 300px;
 top: 250px;
 /*width: 280px;*/
-/*padding: 10px;
+padding: 10px;
 width: 700px;
-margin-left: auto;
+/*margin-left: auto;
 margin-right: auto;*/
 background-color: #500000;
 text-align: center;
@@ -136,15 +136,15 @@ display: none;
 /*</style>*/
 
 #sub2 {
-  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
+  /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
-/*position: absolute;
+position: absolute;
 left: 300px;
 top: 250px;
 /*width: 280px;*/
-/*padding: 10px;
+padding: 10px;
 width: 700px;
-margin-left: auto;
+/*margin-left: auto;
 margin-right: auto;*/
 background-color: #500000;
 text-align: center;
@@ -154,15 +154,15 @@ display: none;
 }
 
 #sub3 {
-  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
+  /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
-/*position: absolute;
+position: absolute;
 left: 300px;
 top: 250px;
 /*width: 280px;*/
-/*padding: 10px;
+padding: 10px;
 width: 700px;
-margin-left: auto;
+/*margin-left: auto;
 margin-right: auto;*/
 background-color: #500000;
 text-align: center;
@@ -172,15 +172,15 @@ display: none;
 }
 
 #sub4 {
-  position:relative; /*margin: -50px -50px*/; width:1000px; top:50%; left:50%;
+  /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
-/*position: absolute;
+position: absolute;
 left: 300px;
 top: 250px;
 /*width: 280px;*/
-/*padding: 10px;
+padding: 10px;
 width: 700px;
-margin-left: auto;
+/*margin-left: auto;
 margin-right: auto;*/
 background-color: #500000;
 text-align: center;
