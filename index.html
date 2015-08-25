@@ -2,6 +2,52 @@
 <html>
   <head> 
   <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <!--START Floating Div Domain Script-->
+   <script>
+            var mydragg = function(){
+                return {
+                    move : function(divid,xpos,ypos){
+                        divid.style.left = xpos + 'px';
+                        divid.style.top = ypos + 'px';
+                    },
+                    startMoving : function(divid,container,evt){
+                        evt = evt || window.event;
+                        var posX = evt.clientX,
+                            posY = evt.clientY,
+                        divTop = divid.style.top,
+                        divLeft = divid.style.left,
+						eWi = parseInt(divid.style.width),
+						eHe = parseInt(divid.style.height),
+						cWi = parseInt(document.getElementById(container).style.width),
+						cHe = parseInt(document.getElementById(container).style.height);
+						document.getElementById(container).style.cursor='move';
+                        divTop = divTop.replace('px','');
+                        divLeft = divLeft.replace('px','');
+                        var diffX = posX - divLeft,
+                            diffY = posY - divTop;
+                        document.onmousemove = function(evt){
+                            evt = evt || window.event;
+                            var posX = evt.clientX,
+                                posY = evt.clientY,
+                                aX = posX - diffX,
+                                aY = posY - diffY;
+								if (aX < 0) aX = 0;
+								if (aY < 0) aY = 0;
+								if (aX + eWi > cWi) aX = cWi - eWi;
+								if (aY + eHe > cHe) aY = cHe -eHe;
+                            mydragg.move(divid,aX,aY);
+                        }
+                    },
+                    stopMoving : function(container){
+                        var a = document.createElement('script');
+						document.getElementById(container).style.cursor='default';
+                        document.onmousemove = function(){}
+                    },
+                }
+            }();
+
+        </script>
+        <!--END Floating Div Domain Script-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <script type="text/javascript" src="/hanis_min.js"> </script>
@@ -15,6 +61,8 @@ controls = startstop, speed, step, looprock, zoom \n\
 controls_style = display:flex;flex-flow:row; \n\
 buttons_style = flex:auto;margin:2px;' ,
 'handiv')">
+<div id='container'>  
+
 <h1>TAMU WRF</h1>
 <h5>3-km WRF-ARW | 24-hour forecasts initialized daily at 06Z/UTC using 12-km NAM IC/BC.</h5>
 <!--<iframe src="https://freesecure.timeanddate.com/clock/i296k8sy/fs15/fcfff/tc500000/ftb/pa5/tt0/tw1/ta1" frameborder="0" width="334" height="27">
@@ -117,8 +165,14 @@ document.getElementById(id).style.display = 'inline';
 <input type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
 <input type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
 
+<!--START Background Footer-->
+
+<!--END Background Footer-->
+
 <!--Product Panels-->
-<div id="sub1">
+<!--START Floating Div Domain Script-->
+<div id="sub1" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <h4>Simulated 1-km Reflectivity</h4>
   <div id="handiv" style="width:800px;background-color:#808080;">
@@ -128,7 +182,9 @@ document.getElementById(id).style.display = 'inline';
   <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
   
 </div>
-<div id="sub2">
+<!--START Floating Div Domain Script-->
+<div id="sub2" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <h4>Surface-based CAPE and CIN</h4>
   <div id="handiv" style="width:800px;background-color:#808080;">
@@ -138,7 +194,9 @@ document.getElementById(id).style.display = 'inline';
   <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
 
 </div>
-<div id="sub3">
+<!--START Floating Div Domain Script-->
+<div id="sub3" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <h4>Precipitable Water</h4>
   <div id="handiv" style="width:800px;background-color:#808080;">
@@ -148,7 +206,9 @@ document.getElementById(id).style.display = 'inline';
   <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
 
 </div>
-<div id="sub4">
+<!--START Floating Div Domain Script-->
+<div id="sub4" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <h4>2-m Temperature, MSLP, 10-m Winds</h4>
   <div id="handiv" style="width:800px;background-color:#808080;">
@@ -168,6 +228,6 @@ document.getElementById(id).style.display = 'inline';
 </div>
 </div>-->
 
-
+</div> <!--END Floating Div Domain-->
 </body>
 </html>
