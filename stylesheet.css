@@ -26,17 +26,17 @@ h2 {
   color:#EDDD9E;
 }
 
-h3.inset:before {
+h3 {
   font-family: Arial, sans-serif;
   text-align: center;
   color:#380000;
   /*Insetting text*/
-  position: absolute;
+  /*position: absolute;
   margin: 2px 0 0 2px;
   content:attr(title);
   color: #fff;
   opacity: 0.2
-  filter:alpha(opacity=20);
+  filter:alpha(opacity=20);*/
 }
 
 h4 {
