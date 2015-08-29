@@ -164,6 +164,19 @@ border: #EDDD9E 5px outset;
 	width:100%;
 }*/
 
+#hanis {
+  width: 1480px;
+  height: 1010px;
+  -webkit-transform:scale(0.5);
+  -moz-transform:scale(0.5);
+  -o-transform:scale(0.5);
+  transform:scale(0.5);
+  position: absolute;
+  left: -300px;
+  top: -150px;
+}
+
+
 #sub1 {
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
