@@ -159,21 +159,21 @@ border: #EDDD9E 5px outset;
 
 /*START Displayboard Scripts*/
 
-/*Centering the Image Animators (Not sure if this works yet)*/
+/*Centering the Image Animators (Not sure if this works yet->It didn't)*/
 /*#haniscentering {
 	width:100%;
 }*/
 
 #hanis {
   width: 1480px;
-  height: 1010px;
-  -webkit-transform:scale(0.5);
-  -moz-transform:scale(0.5);
-  -o-transform:scale(0.5);
-  transform:scale(0.5);
+  height: 1030px;
+  -webkit-transform:scale(0.75);
+  -moz-transform:scale(0.75);
+  -o-transform:scale(0.75);
+  transform:scale(0.75);
   position: absolute;
   left: -300px;
-  top: -150px;
+  top: -200px;
 }
 
 
