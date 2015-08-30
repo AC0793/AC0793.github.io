@@ -164,11 +164,14 @@ border: #EDDD9E 5px outset;
 }
 
 /*Button Color Changing*/
-
 /*add interact.js app CSS here*/
+.tap-target {
+	background-color: #500000;
+}
 
-
-
+.tap-target.switch-bg {
+	background-color: #EDDD9E;
+}
 
 /*START Displayboard Scripts*/
 
