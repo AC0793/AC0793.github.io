@@ -12,6 +12,12 @@ body {
         height: 100%;    
 }
 
+/*Floating Div Touch-Drag Class*/
+.draggable {
+	position:absolute;
+	width:800px;
+	height:1010px;
+}
 
 /*Headings*/
 h1 {
@@ -186,7 +192,7 @@ top: 25%; /*250px*/
 right: 10%;
 /*width: 280px;*/
 padding: 10px;
-width: 80%; /*700px;*/
+width: 800px; /*700px; 80%*/
 height: 1010px;
 background-color: #733333;
 /*margin-left: auto;
