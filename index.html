@@ -48,6 +48,34 @@
 
         </script>
         <!--END Floating Div Domain Script-->
+        
+        <!--START Touch Movable Div Script for Product #1-->
+        <script>
+        	var sub1 = document.getElementById('sub1');
+  sub1.addEventListener('touchmove', function(event) {
+    var touch = event.targetTouches[0];
+ 
+    // Place element where the finger is
+    sub1.style.left = touch.pageX-25 + 'px';
+    sub1.style.top = touch.pageY-25 + 'px';
+    event.preventDefault();
+  }, false);
+        </script>
+        
+        <!--START Touch Movable Div Script for Product #2-->
+        <script>
+        	var sub2 = document.getElementById('sub1');
+  sub2.addEventListener('touchmove', function(event) {
+    var touch = event.targetTouches[0];
+ 
+    // Place element where the finger is
+    sub2.style.left = touch.pageX-25 + 'px';
+    sub2.style.top = touch.pageY-25 + 'px';
+    event.preventDefault();
+  }, false);
+        </script>
+        
+        
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <script type="text/javascript" src="/hanis_min.js"> </script>
