@@ -49,31 +49,23 @@
         </script>
         <!--END Floating Div Domain Script-->
         
-        <!--START Touch Movable Div Script for Product #1-->
+        <!--START Touch Movable Div Class Script for Products-->
         <script>
-        	var sub1 = document.getElementById('sub1');
-  sub1.addEventListener('touchmove', function(event) {
-    var touch = event.targetTouches[0];
+        	var nodeList = document.getElementsByClassName('draggable');
  
-    // Place element where the finger is
-    sub1.style.left = touch.pageX-25 + 'px';
-    sub1.style.top = touch.pageY-25 + 'px';
-    event.preventDefault();
-  }, false);
+  for(var i=0;i<nodeList.length;i++) {
+    var obj = nodeList[i];
+    obj.addEventListener('touchmove', function(event) {
+      var touch = event.targetTouches[0];
+ 
+      // Place element where the finger is
+      event.target.style.left = touch.pageX + 'px';
+      event.target.style.top = touch.pageY + 'px';
+      event.preventDefault();
+    }, false);
+  }
         </script>
         
-        <!--START Touch Movable Div Script for Product #2-->
-        <script>
-        	var sub2 = document.getElementById('sub1');
-  sub2.addEventListener('touchmove', function(event) {
-    var touch = event.targetTouches[0];
- 
-    // Place element where the finger is
-    sub2.style.left = touch.pageX-25 + 'px';
-    sub2.style.top = touch.pageY-25 + 'px';
-    event.preventDefault();
-  }, false);
-        </script>
         
         
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -243,7 +235,7 @@ document.getElementById(id).style.display = 'inline';
 
 <!--Product Panels-->
 <!--START Floating Div Domain Script-->
-<div id="sub1" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub1" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
@@ -281,7 +273,7 @@ document.getElementById(id).style.display = 'inline';
 </div>
 
 <!--START Floating Div Domain Script-->
-<div id="sub2" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub2" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
@@ -324,7 +316,7 @@ document.getElementById(id).style.display = 'inline';
 </div>
 
 <!--START Floating Div Domain Script-->
-<div id="sub3" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub3" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
@@ -367,7 +359,7 @@ document.getElementById(id).style.display = 'inline';
 </div>
 
 <!--START Floating Div Domain Script-->
-<div id="sub4" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub4" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
@@ -410,7 +402,7 @@ document.getElementById(id).style.display = 'inline';
 </div>
 
 <!--START Floating Div Domain Script-->
-<div id="sub5" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub5" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
@@ -453,7 +445,7 @@ document.getElementById(id).style.display = 'inline';
 </div>
 
 <!--START Floating Div Domain Script-->
-<div id="sub6" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+<div class="draggable" id="sub6" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
   <!--END Floating Div Domain Script-->
   <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
   <hr>
