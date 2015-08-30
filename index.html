@@ -66,6 +66,15 @@
   }
         </script>
         
+        <!--Button Color Changing-->
+        <script src="/interact.js">
+        	interact('.tap-target')
+  .on('tap', function (event) {
+    event.currentTarget.classList.toggle('switch-bg');
+    event.preventDefault();
+  });
+        </script>
+        
         
         
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
