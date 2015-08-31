@@ -165,14 +165,44 @@ border: #EDDD9E 5px outset;
 
 /*Button Color Changing*/
 /*add interact.js app CSS here*/
-.tap-target {
+/*.tap-target {
 	background-color: #500000;
 }
 
 .tap-target.switch-bg {
 	background-color: #EDDD9E;
+}*/
+.tap-target {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  margin: 10% auto;
+
+  border-radius: 100%;
+
+  font-size: 1.125em;
+  text-align: center;
+  color: #fff;
+  background-color: #29e;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
 }
 
+.tap-target.switch-bg {
+  background-color: #f40;
+}
+
+.tap-target.large {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 /*START Displayboard Scripts*/
 
 /*Centering the Image Animators (Not sure if this works yet->It didn't)*/
