@@ -173,25 +173,13 @@ border: #EDDD9E 5px outset;
 	background-color: #EDDD9E;
 }*/
 .tap-target {
-  width: 50%;
-  height: 100%;
-  padding: 10%;
-  margin: 10% auto;
-
-  border-radius: 100%;
-
-  font-size: 1.125em;
-  text-align: center;
-  color: #fff;
-  background-color: #29e;
-
+  background-color: #500000;
   cursor: pointer;
-
   transition: all 0.3s;
 }
 
 .tap-target.switch-bg {
-  background-color: #f40;
+  background-color: #EDDD9E;
 }
 
 .tap-target.large {
