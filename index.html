@@ -66,7 +66,7 @@
   }
         </script>
         
-        <!--Button Color Changing-->
+        <!--/NOW OLD/Button Color Changing
         <script type="text/javascript" src="/interact-1.2.4.min.js">
         	interact('.tap-target')
   .on('tap', function (event) {
@@ -81,10 +81,17 @@
   .on('hold', function (event) {
     event.currentTarget.classList.toggle('rotate');
     event.currentTarget.classList.remove('large');
-  });
+  });-->
+        <!--</script>-->
+        <!--/NEW/Button Color Changing-->
+        <script type="text/javascript" src="/jquery-2.1.4.min.js">
+        	$(function () {
+        		$("#myButton").on('click', function () {
+        $(this).toggleClass('red');
+        $("#result").toggle();
+    });
+        	});
         </script>
-        
-        
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <script type="text/javascript" src="/hanis_min.js"> </script>
