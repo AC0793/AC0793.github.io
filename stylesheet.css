@@ -87,7 +87,7 @@ p {
 /*Button for Product Section #0*/
 #bt0 {
   font-family: Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -107,7 +107,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #1*/
 #bt1 {
   font-family: Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -127,6 +127,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #2*/
 #bt2 {
   font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -145,6 +146,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #3*/
 #bt3 {
   font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -163,6 +165,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #4*/
 #bt4 {
   font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -181,6 +184,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #5*/
 #bt5 {
   font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
@@ -199,6 +203,7 @@ border: #EDDD9E 5px outset;
 /*Button for Product Section #6*/
 #bt6 {
   font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   color:#EDDD9E;
 margin-left: auto;
