@@ -121,13 +121,28 @@ display: none;
 </style>-->
 
 <!--BEGIN Product Hide/Show Button Scripts Section-->
+
+<script language="JavaScript">
+function setVisibility(sub0) {
+if(document.getElementById('bt0').value=='Show ALL'){
+document.getElementById('bt0').value = 'Show ALL';
+document.getElementById(sub0).style.display = 'none';
+}else{
+document.getElementById('bt0').value = 'Show ALL';
+document.getElementById(sub0).style.display = 'inline';
+}
+}
+
+</script>
+
+
 <script language="JavaScript">
 function setVisibility(sub1) {
-if(document.getElementById('bt1').value=='Hide Simulated 1-km Reflectivity'){
+if(document.getElementById('bt1').value=='Show Simulated 1-km Reflectivity'){
 document.getElementById('bt1').value = 'Show Simulated 1-km Reflectivity';
 document.getElementById(sub1).style.display = 'none';
 }else{
-document.getElementById('bt1').value = 'Hide Simulated 1-km Reflectivity';
+document.getElementById('bt1').value = 'Show Simulated 1-km Reflectivity';
 document.getElementById(sub1).style.display = 'inline';
 }
 }
@@ -136,11 +151,11 @@ document.getElementById(sub1).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub2) {
-if(document.getElementById('bt2').value=='Hide Surface-based CAPE and CIN'){
+if(document.getElementById('bt2').value=='Show Surface-based CAPE and CIN'){
 document.getElementById('bt2').value = 'Show Surface-based CAPE and CIN';
 document.getElementById(sub2).style.display = 'none';
 }else{
-document.getElementById('bt2').value = 'Hide Surface-based CAPE and CIN';
+document.getElementById('bt2').value = 'Show Surface-based CAPE and CIN';
 document.getElementById(sub2).style.display = 'inline';
 }
 }
@@ -149,11 +164,11 @@ document.getElementById(sub2).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub3) {
-if(document.getElementById('bt3').value=='Hide Precipitable Water'){
+if(document.getElementById('bt3').value=='Show Precipitable Water'){
 document.getElementById('bt3').value = 'Show Precipitable Water';
 document.getElementById(sub3).style.display = 'none';
 }else{
-document.getElementById('bt3').value = 'Hide Precipitable Water';
+document.getElementById('bt3').value = 'Show Precipitable Water';
 document.getElementById(sub3).style.display = 'inline';
 }
 }
@@ -162,11 +177,11 @@ document.getElementById(sub3).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub4) {
-if(document.getElementById('bt4').value=='Hide 2-m Temperature, MSLP, 10-m Winds'){
+if(document.getElementById('bt4').value=='Show 2-m Temperature, MSLP, 10-m Winds'){
 document.getElementById('bt4').value = 'Show 2-m Temperature, MSLP, 10-m Winds';
 document.getElementById(sub4).style.display = 'none';
 }else{
-document.getElementById('bt4').value = 'Hide 2-m Temperature, MSLP, 10-m Winds';
+document.getElementById('bt4').value = 'Show 2-m Temperature, MSLP, 10-m Winds';
 document.getElementById(sub4).style.display = 'inline';
 }
 }
@@ -175,11 +190,11 @@ document.getElementById(sub4).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub5) {
-if(document.getElementById('bt5').value=='Hide Surface Dewpoint Temperature'){
+if(document.getElementById('bt5').value=='Show Surface Dewpoint Temperature'){
 document.getElementById('bt5').value = 'Show Surface Dewpoint Temperature';
 document.getElementById(sub5).style.display = 'none';
 }else{
-document.getElementById('bt5').value = 'Hide Surface Dewpoint Temperature';
+document.getElementById('bt5').value = 'Show Surface Dewpoint Temperature';
 document.getElementById(sub5).style.display = 'inline';
 }
 }
@@ -188,11 +203,11 @@ document.getElementById(sub5).style.display = 'inline';
 
 <script language="JavaScript">
 function setVisibility(sub6) {
-if(document.getElementById('bt6').value=='Hide 700mb Relative Humidity'){
+if(document.getElementById('bt6').value=='Show 700mb Relative Humidity'){
 document.getElementById('bt6').value = 'Show 700mb Relative Humidity';
 document.getElementById(sub6).style.display = 'none';
 }else{
-document.getElementById('bt6').value = 'Hide 700mb Relative Humidity';
+document.getElementById('bt6').value = 'Show 700mb Relative Humidity';
 document.getElementById(sub6).style.display = 'inline';
 }
 }
@@ -218,17 +233,18 @@ document.getElementById(id).style.display = 'inline';
 <body>
 <!--Product Switchers-->
 <!--<input class="tap-target" type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";>-->
-<div class="tap-target" id=bt1>
+<!--<div class="tap-target" id=bt0>
 <button type=button name=type value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";>
 	Show Simulated 1-km Reflectivity
 </button>
-</div>
-<input class="tap-target" type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
-<input class="tap-target" type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
-<input class="tap-target" type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
-<input class="tap-target" type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
-<input class="tap-target" type=button name=type id='bt5' value='Show Surface Dewpoint Temperature' onclick="setVisibility('sub5');";> 
-<input class="tap-target" type=button name=type id='bt6' value='Show 700mb Relative Humidity' onclick="setVisibility('sub6');";> 
+</div>-->
+<input type=button name=type id='bt0' value='Show ALL' onclick="setVisibility('sub0');";> 
+<input type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
+<input type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
+<input type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
+<input type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
+<input type=button name=type id='bt5' value='Show Surface Dewpoint Temperature' onclick="setVisibility('sub5');";> 
+<input type=button name=type id='bt6' value='Show 700mb Relative Humidity' onclick="setVisibility('sub6');";> 
 <!--START Background Footer-->
 <p>&nbsp;</p>
 <p>&nbsp;</p>
