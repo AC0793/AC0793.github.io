@@ -2,8 +2,8 @@
 <html>
   <head> 
   <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-  <!--START Floating Div Domain Script-->
-   <script>
+  <!--START OLD Floating Div Domain Script-->
+  <!--<script>
             var mydragg = function(){
                 return {
                     move : function(divid,xpos,ypos){
@@ -46,14 +46,11 @@
                 }
             }();
 
-        </script>
+        </script>-->
         <!--END Floating Div Domain Script-->
         
-        <!--START NEW Floating Div Domain Script-->
-        
-        <!--END NEW Floating Div Domain Script-->
-        <!--START Touch Movable Div Class Script for Products-->
-        <script language="JavaScript">
+        <!--START OLD Touch Movable Div Class Script for Products-->
+        <!--<script language="JavaScript">
         	var nodeList = document.getElementsByClassName('draggable');
  
   for(var i=0;i<nodeList.length;i++) {
@@ -67,8 +64,10 @@
       event.preventDefault();
     }, false);
   }
-        </script>
-
+        </script>-->
+        
+<!--START NEW Floating Div Domain Script-->
+<!--START NEW Touch Movable Div Class Script for Products-->
         <script type="text/javascript" src="/interact-1.2.4.min.js">
         	// target elements with the "draggable" class
 interact('.draggable')
@@ -106,7 +105,9 @@ interact('.draggable')
     target.setAttribute('data-y', y);
   }
         </script>
-        <!--/NEW/Button Color Changing-->
+        <!--END NEW Touch Movable Div Class Script for Products-->
+        
+        <!--/NEW and sort of WORKING/Button Color Changing-->
         <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
         <script>
         $( document ).ready(function() {
