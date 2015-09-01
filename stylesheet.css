@@ -84,7 +84,7 @@ p {
 }*/
 
 /*Button for Product Section #0*/
-#bt0 {
+/*#bt0 {
   font-family: Arial, sans-serif;
   font-size: 1em;
   text-align: center;
@@ -96,7 +96,7 @@ text-align: center;
 color: #EDDD9E;
 border: #EDDD9E 5px outset;
 /*display: none;*/
-}
+/*}
 
 #bt0.red {
     background-color: red;
@@ -262,26 +262,26 @@ border: #EDDD9E 5px outset;
 }
 
 /*Product Floating Displays*/
-#sub0 {
+/*#sub0 {
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
   
-position: absolute;
+/*position: absolute;
 left: 50px; /*9%*/
-top: 300px; /*25%*/
-right: 10%;
+/*top: 300px; /*25%*/
+/*right: 10%;
 /*width: 280px;*/
-padding: 10px;
+/*padding: 10px;
 width: 1165px; 
 height: 1515px;
 background-color: #733333;
 /*margin-left: auto;
 margin-right: auto;*/
-text-align: center;
+/*text-align: center;
 color: #EDDD9E;
 border: #EDDD9E 10px groove;
 display: none;
 /*Floating Div Compatibility?*/
--webkit-user-select: none;
+/*-webkit-user-select: none;
 -moz-user-select: none;
 -o-user-select: none;
 -ms-user-select: none;
@@ -289,7 +289,7 @@ display: none;
 user-select: none;
 -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
-}
+}*/
 
 #sub1 {
   /*position:relative; margin: -50px -50px; width:1000px; top:50%; left:50%;*/
