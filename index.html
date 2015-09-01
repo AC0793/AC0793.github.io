@@ -84,7 +84,9 @@
   });-->
         <!--</script>-->
         <!--/NEW/Button Color Changing-->
-        <script type="text/javascript" src="/jquery-2.1.4.min.js">
+        <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+        <script>
+        $( document ).ready(function() {
         	$(function () {
         		$("#bt0").on('click', function () {
         $(this).toggleClass('red');
@@ -119,6 +121,7 @@
         		$("#bt6").on('click', function () {
         $(this).toggleClass('red');
     });
+        	});
         	});
         </script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
