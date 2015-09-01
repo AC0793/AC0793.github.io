@@ -12,12 +12,11 @@ body {
         height: 100%;    
 }
 
-/*Floating Div Touch-Drag Class*/
+/*Floating Div Touch-Drag Class
 .draggable {
-	position:absolute;
-	width:1165px;
-	height:1010px;
-}
+	-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}*/
 
 /*Headings*/
 h1 {
@@ -259,7 +258,7 @@ right: 10%;
 /*width: 280px;*/
 padding: 10px;
 width: 1165px; 
-height: 1010px;
+height: 1515px;
 background-color: #733333;
 /*margin-left: auto;
 margin-right: auto;*/
@@ -267,7 +266,6 @@ text-align: center;
 color: #EDDD9E;
 border: #EDDD9E 10px groove;
 display: none;
-
 /*Floating Div Compatibility?*/
 -webkit-user-select: none;
 -moz-user-select: none;
@@ -275,6 +273,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub1 {
@@ -303,6 +303,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub2 {
@@ -331,6 +333,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub3 {
@@ -359,6 +363,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub4 {
@@ -387,6 +393,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub5 {
@@ -415,6 +423,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 #sub6 {
@@ -443,6 +453,8 @@ display: none;
 -ms-user-select: none;
 -khtml-user-select: none;     
 user-select: none;
+-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
  /*END Displayboard Script*/
