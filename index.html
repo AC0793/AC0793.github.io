@@ -49,6 +49,9 @@
         </script>
         <!--END Floating Div Domain Script-->
         
+        <!--START NEW Floating Div Domain Script-->
+        
+        <!--END NEW Floating Div Domain Script-->
         <!--START Touch Movable Div Class Script for Products-->
         <script language="JavaScript">
         	var nodeList = document.getElementsByClassName('draggable');
@@ -65,24 +68,44 @@
     }, false);
   }
         </script>
-        
-        <!--/NOW OLD/Button Color Changing
+
         <script type="text/javascript" src="/interact-1.2.4.min.js">
-        	interact('.tap-target')
-  .on('tap', function (event) {
-    event.currentTarget.classList.toggle('switch-bg');
-    event.preventDefault();
-  })
-  .on('doubletap', function (event) {
-    event.currentTarget.classList.toggle('large');
-    event.currentTarget.classList.remove('rotate');
-    event.preventDefault();
-  })
-  .on('hold', function (event) {
-    event.currentTarget.classList.toggle('rotate');
-    event.currentTarget.classList.remove('large');
-  });-->
-        <!--</script>-->
+        	// target elements with the "draggable" class
+interact('.draggable')
+  .draggable ({
+    // enable inertial throwing
+    inertia: true,
+    },
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(event.dx * event.dx +
+                     event.dy * event.dy)|0) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the position attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+        </script>
         <!--/NEW/Button Color Changing-->
         <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
         <script>
@@ -277,13 +300,13 @@ document.getElementById(id).style.display = 'inline';
 	Show Simulated 1-km Reflectivity
 </button>
 </div>-->
-<input type=button name=type id='bt0' value='Show ALL' onclick="setVisibility('sub0');";> 
-<input type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
-<input type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
-<input type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
-<input type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
-<input type=button name=type id='bt5' value='Show Surface Dewpoint Temperature' onclick="setVisibility('sub5');";> 
-<input type=button name=type id='bt6' value='Show 700mb Relative Humidity' onclick="setVisibility('sub6');";> 
+<input class="draggable" type=button name=type id='bt0' value='Show ALL' onclick="setVisibility('sub0');";> 
+<input class="draggable" type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
+<input class="draggable" type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
+<input class="draggable" type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
+<input class="draggable" type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
+<input class="draggable" type=button name=type id='bt5' value='Show Surface Dewpoint Temperature' onclick="setVisibility('sub5');";> 
+<input class="draggable" type=button name=type id='bt6' value='Show 700mb Relative Humidity' onclick="setVisibility('sub6');";> 
 <!--START Background Footer-->
 <p>&nbsp;</p>
 <p>&nbsp;</p>
