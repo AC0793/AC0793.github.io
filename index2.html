@@ -1,1 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <!--START OLD Floating Div Domain Script-->
+  <script>
+            var mydragg = function(){
+                return {
+                    move : function(divid,xpos,ypos){
+                        divid.style.left = xpos + 'px';
+                        divid.style.top = ypos + 'px';
+                    },
+                    startMoving : function(divid,container,evt){
+                        evt = evt || window.event;
+                        var posX = evt.clientX,
+                            posY = evt.clientY,
+                        divTop = divid.style.top,
+                        divLeft = divid.style.left,
+						eWi = parseInt(divid.style.width),
+						eHe = parseInt(divid.style.height),
+						cWi = parseInt(document.getElementById(container).style.width),
+						cHe = parseInt(document.getElementById(container).style.height);
+						document.getElementById(container).style.cursor='move';
+                        divTop = divTop.replace('px','');
+                        divLeft = divLeft.replace('px','');
+                        var diffX = posX - divLeft,
+                            diffY = posY - divTop;
+                        document.onmousemove = function(evt){
+                            evt = evt || window.event;
+                            var posX = evt.clientX,
+                                posY = evt.clientY,
+                                aX = posX - diffX,
+                                aY = posY - diffY;
+								if (aX < 0) aX = 0;
+								if (aY < 0) aY = 0;
+								if (aX + eWi > cWi) aX = cWi - eWi;
+								if (aY + eHe > cHe) aY = cHe -eHe;
+                            mydragg.move(divid,aX,aY);
+                        }
+                    },
+                    stopMoving : function(container){
+                        var a = document.createElement('script');
+						document.getElementById(container).style.cursor='default';
+                        document.onmousemove = function(){}
+                    },
+                }
+            }();
 
+        </script>
+        <!--END Floating Div Domain Script-->
+        
+        <!--START OLD Touch Movable Div Class Script for Products-->
+        <!--<script language="JavaScript">
+        	var nodeList = document.getElementsByClassName('draggable');
+ 
+  for(var i=0;i<nodeList.length;i++) {
+    var obj = nodeList[i];
+    obj.addEventListener('touchmove', function(event) {
+      var touch = event.targetTouches[0];
+ 
+      // Place element where the finger is
+      event.target.style.left = touch.pageX + 'px';
+      event.target.style.top = touch.pageY + 'px';
+      event.preventDefault();
+    }, false);
+  }
+        </script>-->
+        
+<!--START NEW Floating Div Domain Script-->
+<!--START NEW Touch Movable Div Class Script for Products-->
+        <script type="text/javascript" src="/interact-1.2.4.min.js">
+        	// target elements with the "draggable" class
+interact('.draggable')
+  .draggable ({
+    // enable inertial throwing
+    inertia: true,
+    },
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(event.dx * event.dx +
+                     event.dy * event.dy)|0) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the position attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+        </script>
+        <!--END NEW Touch Movable Div Class Script for Products-->
+        
+        <!--/NEW and sort of WORKING/Button Color Changing-->
+        <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+        <script>
+        $( document ).ready(function() {
+        	//$(function () {
+        	//	$("#bt0").on('click', function () {
+        //$(this).toggleClass('red');
+    //});
+        	//});
+        	$(function () {
+        		$("#bt1").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	$(function () {
+        		$("#bt2").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	$(function () {
+        		$("#bt3").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	$(function () {
+        		$("#bt4").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	$(function () {
+        		$("#bt5").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	$(function () {
+        		$("#bt6").on('click', function () {
+        $(this).toggleClass('red');
+    });
+        	});
+        	});
+        </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <script type="text/javascript" src="/hanis_min.js"> </script>
+  <title>TAMU WRF</title>
+  </head>
+<body>
+<div id='container'>  
+
+<h1>TAMU WRF</h1>
+<h5>3-km WRF-ARW | 24-hour forecasts initialized daily at 06Z/UTC using 12-km NAM IC/BC.</h5>
+<!--<iframe src="https://freesecure.timeanddate.com/clock/i296k8sy/fs15/fcfff/tc500000/ftb/pa5/tt0/tw1/ta1" frameborder="0" width="334" height="27">
+</iframe>-->
+
+<!--<iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>-->
+
+<h2>PRODUCTS</h2>
+
+<!--<style type="text/css">
+div {
+position: absolute;
+left: 300px;
+top: 250px;
+/*width: 280px;*/
+padding: 10px;
+width: 700px;
+margin-left: auto;
+margin-right: auto;
+background-color: #500000;
+text-align: center;
+color: #EDDD9E;
+border: #EDDD9E 10px groove;
+display: none;
+}
+</style>-->
+
+<!--BEGIN Product Hide/Show Button Scripts Section-->
+
+<!--<script language="JavaScript">
+function setVisibility(sub0) {
+if(document.getElementById('bt0').value=='Hide ALL'){
+document.getElementById('bt0').value = 'Show ALL';
+document.getElementById(sub0).style.display = 'none';
+}else{
+document.getElementById('bt0').value = 'Hide ALL';
+document.getElementById(sub0).style.display = 'inline';
+}
+}
+
+</script>-->
+
+
+<script language="JavaScript">
+function setVisibility(sub1) {
+if(document.getElementById('bt1').value=='Hide Simulated 1-km Reflectivity'){
+document.getElementById('bt1').value = 'Show Simulated 1-km Reflectivity';
+document.getElementById(sub1).style.display = 'none';
+}else{
+document.getElementById('bt1').value = 'Hide Simulated 1-km Reflectivity';
+document.getElementById(sub1).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub2) {
+if(document.getElementById('bt2').value=='Hide Surface-based CAPE and CIN'){
+document.getElementById('bt2').value = 'Show Surface-based CAPE and CIN';
+document.getElementById(sub2).style.display = 'none';
+}else{
+document.getElementById('bt2').value = 'Hide Surface-based CAPE and CIN';
+document.getElementById(sub2).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub3) {
+if(document.getElementById('bt3').value=='Hide Precipitable Water'){
+document.getElementById('bt3').value = 'Show Precipitable Water';
+document.getElementById(sub3).style.display = 'none';
+}else{
+document.getElementById('bt3').value = 'Hide Precipitable Water';
+document.getElementById(sub3).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub4) {
+if(document.getElementById('bt4').value=='Hide 2-m Temperature, MSLP, 10-m Winds'){
+document.getElementById('bt4').value = 'Show 2-m Temperature, MSLP, 10-m Winds';
+document.getElementById(sub4).style.display = 'none';
+}else{
+document.getElementById('bt4').value = 'Hide 2-m Temperature, MSLP, 10-m Winds';
+document.getElementById(sub4).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub5) {
+if(document.getElementById('bt5').value=='Hide Surface Dewpoint Temperature'){
+document.getElementById('bt5').value = 'Show Surface Dewpoint Temperature';
+document.getElementById(sub5).style.display = 'none';
+}else{
+document.getElementById('bt5').value = 'Hide Surface Dewpoint Temperature';
+document.getElementById(sub5).style.display = 'inline';
+}
+}
+
+</script>
+
+<script language="JavaScript">
+function setVisibility(sub6) {
+if(document.getElementById('bt6').value=='Hide 700mb Relative Humidity'){
+document.getElementById('bt6').value = 'Show 700mb Relative Humidity';
+document.getElementById(sub6).style.display = 'none';
+}else{
+document.getElementById('bt6').value = 'Hide 700mb Relative Humidity';
+document.getElementById(sub6).style.display = 'inline';
+}
+}
+
+</script>
+<!--Product Hide/Show Button Scripts Template-->
+<!--<script language="JavaScript">
+function setVisibility(id) {
+if(document.getElementById('bt3').value=='Hide Severe Products'){
+document.getElementById('bt3').value = 'Show Severe Products';
+document.getElementById(id).style.display = 'none';
+}else{
+document.getElementById('bt3').value = 'Hide Severe Products';
+document.getElementById(id).style.display = 'inline';
+}
+}
+
+</script>-->
+
+<!--END Product Hide/Show Scripts Section-->
+
+</head>
+<body>
+<!--Product Switchers-->
+<!--<input class="tap-target" type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";>-->
+<!--<div class="tap-target" id=bt0>
+<button type=button name=type value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";>
+	Show Simulated 1-km Reflectivity
+</button>
+</div>-->
+
+<!--<input type=button name=type id='bt0' value='Show ALL' onclick="setVisibility('sub0');";>--> 
+<input type=button name=type id='bt1' value='Show Simulated 1-km Reflectivity' onclick="setVisibility('sub1');";> 
+<input type=button name=type id='bt2' value='Show Surface-based CAPE and CIN' onclick="setVisibility('sub2');";> 
+<input type=button name=type id='bt3' value='Show Precipitable Water' onclick="setVisibility('sub3');";> 
+<input type=button name=type id='bt4' value='Show 2-m Temperature, MSLP, 10-m Winds' onclick="setVisibility('sub4');";> 
+<input type=button name=type id='bt5' value='Show Surface Dewpoint Temperature' onclick="setVisibility('sub5');";> 
+<input type=button name=type id='bt6' value='Show 700mb Relative Humidity' onclick="setVisibility('sub6');";> 
+<!--START Background Footer-->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3>
+	<a href="http://sc.tamu.edu/systems/#eos" style="color:#A69B6F; text-decoration: none">All simulations were performed on EOS, a resource provided by Texas A&M High Performance Research Computing.</a>
+</h3>
+
+<h3>
+	Products are generated through continued efforts of Texas A&M Student Operational ADRAD Project (SOAP) summer 2015 students.
+</h3>
+
+<h3>
+	Contact for questions, comments, suggestions, or bug reports: <a href="mailto:cjnowotarski@tamu.edu" style="color:#A69B6F; text-decoration: none">cjnowotarski@tamu.edu</a> and <a href="mailto:ac0793@tamu.edu" style="color:#A69B6F; text-decoration: none">ac0793@tamu.edu</a>
+</h3>
+
+<h3>
+	Last updated: 9/1/2015
+</h3>
+
+
+
+
+<!--END Background Footer-->
+
+<!--Product Panels-->
+<!--START Floating Div Domain Script-->
+
+<!--<div class="draggable" id="sub0" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <!--<iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag</em>*********************<em>Click and Drag</em>*********************<em>Click and Drag</em>*******</h4>
+  <h4>ALL PRODUCTS</h4>
+<table id="allprod" style="width:100%">
+  <tr>
+    <td><iframe id="hanis2" src="reflectivity.html"></iframe></td>
+    <!--<td><iframe id="hanis2" src="sbcape.html"></iframe></td>-->		
+  <!--</tr>
+  <tr>
+    <td><iframe id="hanis2" src="pwat.html"></iframe></td>
+    <!--<td><iframe id="hanis2" src="sfctpwnd.html"></iframe></td>-->		
+  <!--</tr>
+  <tr>
+    <td><iframe id="hanis2" src="sfcdp.html"></iframe></td>
+    <!--<td><iframe id="hanis2" src="700rh.html"></iframe></td>-->		
+  <!--</tr>
+</table>
+  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+  
+</div>-->
+
+<div class="draggable" id="sub1" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>Simulated 1-km Reflectivity</h2>
+  <iframe id="hanis" src="reflectivity.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+  
+<!--<!--</iframe>style="border:0px;width:60em;height:41em;"-->
+</div>
+
+<!--START Floating Div Domain Script-->
+<div class="draggable" id="sub2" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>Surface-based CAPE and CIN</h2>
+  <iframe id="hanis" src="sbcape.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+
+</div>
+
+<!--START Floating Div Domain Script-->
+<div class="draggable" id="sub3" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>Precipitable Water</h2>
+  <iframe id="hanis" src="pwat.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+
+</div>
+
+<!--START Floating Div Domain Script-->
+<div class="draggable" id="sub4" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>2-m Temperature, MSLP, 10-m Winds</h2>
+  <iframe id="hanis" src="sfctpwnd.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+
+</div>
+
+<!--START Floating Div Domain Script-->
+<div class="draggable" id="sub5" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>Surface Dewpoint Temperature</h2>
+  <iframe id="hanis" src="sfcdp.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+
+</div>
+
+<!--START Floating Div Domain Script-->
+<div class="draggable" id="sub6" onmousedown='mydragg.startMoving(this,"container",event);' onmouseup='mydragg.stopMoving("container");'>
+  <!--END Floating Div Domain Script-->
+  <iframe id="UTCTime" src="https://freesecure.timeanddate.com/clock/i4th8ld1/fs16/fceddd9e/tc500000/pc500000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="209" height="52"></iframe>
+  <hr>
+  <h4>*******<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*********************<em>Click and Drag Right</em>*******</h4>
+  <h2>700mb Relative Humidity</h2>
+  <iframe id="hanis" src="700rh.html"> </iframe>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <hr>
+  <font size=-1>This webapp is Copyright© 2014, 2015 by Tom Whittaker
+
+</div>
+
+<!--<div id="wrapper">
+<div id="footer">
+<div class="box">
+<h2>This is your tearaway footer</h2>
+<p>It will stick to the bottom of the viewport on short pages, or stretch down on long pages.</p>
+</div>
+</div>
+</div>-->
+
+</div> <!--END Floating Div Domain-->
+</body>
+</html>
