@@ -18,6 +18,12 @@ body {
           transform: translate(0px, 0px);
 }*/
 
+/*SHOW ALL Products Table*/
+.box {
+    float:left;
+    margin-right:20px;
+}
+
 /*Headings*/
 h1 {
   font-family: Arial, sans-serif;
