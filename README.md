@@ -1,6 +1,6 @@
 # AC0793.github.io
 <p>
-Howdy, this is a test display of TAMU WX computer model products! :-)
+Hell, this is a test display of my résumé website.
 <p>
 <a href=http://ac0793.github.io/> My Website </a>
 </p>
