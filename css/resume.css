@@ -177,6 +177,10 @@ p.lead {
   width: 150px;
 }
 
+#img4 {
+  padding: 30px;
+}
+
 #img1:hover {
   box-shadow: 0 0 10px 10px rgba(221, 221, 221, 1);
 }
