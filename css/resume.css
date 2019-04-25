@@ -181,6 +181,11 @@ p.lead {
   padding: 30px;
 }
 
+#img5 {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #img1:hover {
   box-shadow: 0 0 10px 10px rgba(221, 221, 221, 1);
 }
