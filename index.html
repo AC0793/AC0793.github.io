@@ -1,260 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Armani Cassel's Resume Showcase</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- OLD Custom styles for this template
-  <link href="css/resume.min.css" rel="stylesheet"> -->
-  
-  <!-- CURRENT Custom styles for this template -->
-  <link href="css/resume.css" rel="stylesheet">
-  
-  <!--Favicon-->
-  <link rel="favicon" type="image/jpg" href="img/acfavi.jpg"/>
-  <!--<link rel="favicon" type="image/jpg" href="https://ac0793.github.io/img/acfavi.jpg"/>-->
-  
-</head>
-
-<body id="page-top">
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Armani Cassel</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#research">Research</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
-        </li>
-      </ul>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | SimpleWebXR</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning">
+        WebGL builds are not supported on mobile devices.
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">SimpleWebXR</div>
+      </div>
     </div>
-  </nav>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Desktop.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Desktop.data",
+        frameworkUrl: buildUrl + "/Desktop.framework.js",
+        codeUrl: buildUrl + "/Desktop.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Rufus31415",
+        productName: "SimpleWebXR",
+        productVersion: "1.0",
+      };
 
-  <div class="container-fluid p-0" id="rside">
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Armani
-          <span class="text-primary">Cassel</span>
-        </h1>
-        <div class="subheading mb-5"> Houston, TX · College Station, TX
-          <!--<a href="mailto:name@email.com">name@email.com</a>-->
-        </div>
-        <p class="lead mb-5">I enjoy visualizing weather data through spatial computing. My current research is in investigating the effectiveness of three-dimensional data presentation methods in varying situations.</p>
-        
-        <img src="/img/DSC06463.JPG" style="width:400px" id="img4">
-        <img src="/img/DSC02110.JPG" style="width:400px" id="img4">
-        
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/armani-cassel-9446079b/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://twitter.com/tamuvrar">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
 
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        // Avoid draining fillrate performance on mobile devices,
+        // and default/override low DPI mode on mobile browsers.
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+      loadingBar.style.display = "block";
 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Texas A&M University</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Meteorology</div>
-            <!--<p>GPA: 3.23</p>-->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2012 - December 2016</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Northland Christian School</h3>
-            <!--<div class="subheading mb-3">Technology Magnet Program</div>-->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2004 - May 2012</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-        <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="research">
-      <div class="w-100">
-        <h2 class="mb-5">Research</h2>
-        <p>American Meterorological Society Presentations: 2016, 2017, 2018</p>
-        
-        <a target="_blank" href="/pdf/ArmaniAMS2016poster.pdf">
-  <img src="/img/ams16poster.png" style="width:300px" id="img1">
-</a>
-
-<a target="_blank" href="/pdf/ArmaniAMS2017poster.pdf">
-  <img src="/img/ams17poster.png" style="width:300px" id="img2">
-</a>
-
-<a target="_blank" href="/pdf/ArmaniAMS2018poster.pdf">
-  <img src="/img/ams18poster.png" style="width:300px" id="img3">
-</a>
-        
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="gallery">
-      <div class="w-100">
-        <h2 class="mb-5">Gallery</h2>
-        
-        
-        <div class="subheading mb-3">KNLY 91.1FM Weather Updates: September 2019</div>
-        <iframe width="500" height="250" src="https://www.youtube.com/embed/yqVLk0pkYss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-        <iframe width="500" height="250" src="https://www.youtube.com/embed/IhH7t8BxqM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-        
-        <div class="subheading mb-3">Study Abroad in Barbados: SEA-MET 2016 Sea Breeze Study</div> 
-        <img src="/img/DSC00704.jpg" style="width:400px" id="img4">
-        <img src="/img/DSC09590.jpg" style="width:400px" id="img4">
-        
-        <div class="subheading mb-3">Study Abroad in Barbados: SEA-MET 2016 African Easterly Wave Analysis</div> 
-        <img src="/img/Scan18_359.jpg" id="img5">
-        
-        <div class="subheading mb-3">KAMU Radio 90.9FM Weather Update, February 2013</div>
-        
-        <div><!--MP3 PLayer below Image Link to KAMU Radio https://www.kamutvfm.org/radio/-->
-        <img src="/img/forecast_banner_am_pm.jpg" id="img5">
-        <audio controls>
-        <source src="/audio/8amwx_9_27_13.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-        </audio>
-        </div>
-        
-        <div class="subheading mb-3">High School Weather Update (at 3:50 mark), October 5, 2011</div>
-        <a href="https://www.schooltube.com/video/bb93b3641fe24ed09c57/Weekly_News_Oct_5th%2C_2011">
-        <img src="/img/10511achswx.png" alt="Weather Map" style="width:400px" id="img4">
-        </a>
-        <a href="https://www.schooltube.com/video/bb93b3641fe24ed09c57/Weekly_News_Oct_5th%2C_2011">
-        <img src="/img/10511achswx2.png" alt="Forecast" style="width:400px" id="img4">
-        </a>
-        
-        <div class="subheading mb-3">Co-produced SchoolTube-Award Winning Prom Behind the Scenes Show, April 2012</div>
-        <a href="https://www.schooltube.com/video/a5ea67ec340e4784a640/NCS_News%3A_Prom_2012%2C_Behind_the_Scenes">
-        <img src="/img/2012prom.png" alt="Title Card" style="width:400px" id="img4">
-        </a>
-        <a href="https://www.schooltube.com/video/a5ea67ec340e4784a640/NCS_News%3A_Prom_2012%2C_Behind_the_Scenes">
-        <img src="/img/2012prom2.png" alt="Nameplate" style="width:400px" id="img4">
-        </a>
-        
-        <div class="subheading mb-3">John Cooper Lower School Weather Anchor, April/May 2004</div>
-        <img src="/img/2004jclsweather.png" style="width:400px" id="img4">
-        <img src="/img/2004jclsweather2.png" style="width:400px" id="img4">
-        <img src="/img/2004jclsweather3.png" style="width:400px" id="img4">
-        <h3 class="mb-0">Skills</h3>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools Experience</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3-alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js-square"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fas fa-vr-cardboard"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-windows"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-redhat"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-adobe"></i>
-          </li>
-        </ul>
-
-        <!--<div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Browser Testing &amp; Debugging</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Cross Functional Teams</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum</li>
-        </ul>-->
-      </div>
-    </section>
-
-    
-    
-  </div>
-    
-    
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
-</body>
-
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
 </html>
